@@ -1,0 +1,7 @@
+root@ip-172-31-21-94:~/cri-dockerd/project4/project-ml-microservice-kubernetes# ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
