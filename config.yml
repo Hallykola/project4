@@ -1,4 +1,15 @@
 version: 2
+
+
+commands:
+
+  install_awscli:
+    description: cd to file directory
+    steps:
+      - run:
+          name: goto directory
+          command: |
+            cd ~/repo/project-ml-microservice-kubernetes
 jobs:
     build:
         docker:
@@ -9,6 +20,7 @@ jobs:
 
         steps:
           - checkout
+          - goto directory
 
         # Download and cache dependencies
         - restore_cache:
@@ -37,3 +49,4 @@ jobs:
             command: |-
                 . venv/bin/activate
                 make lint 
+                
