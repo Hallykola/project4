@@ -124,3 +124,7 @@ That's about it! When working with kubernetes, you may need to install some othe
 # project4
 
 [![Hallykola](https://circleci.com/gh/Hallykola/<project4>.svg?style=svg)](https://app.circleci.com/pipelines/github/Hallykola/project4)
+
+!https://circleci.com/gh/Hallykola/project4.svg?style=svg!:https://app.circleci.com/pipelines/github/Hallykola/project4
+
+!https://circleci.com/gh/circleci/circleci-docs.svg?style=svg!:https://circleci.com/gh/circleci/circleci-docs
