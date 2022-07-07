@@ -21,10 +21,9 @@ jobs:
 
         steps:
           - checkout
-          - goto_directory
 
-         - run:
-            name: eenter directory
+        - run:
+            name: enter directory
             command: |-
                 cd project-ml-microservice-kubernetes
                 echo "I am in directory" 
