@@ -10,7 +10,7 @@ commands:
           name: goto_directory
           command: |
             cd project-ml-microservice-kubernetes
-            echo "I am in irectory"
+            echo "I am in directory"
 jobs:
     build:
         docker:
@@ -23,10 +23,16 @@ jobs:
           - checkout
           - goto_directory
 
+         - run:
+            name: eenter directory
+            command: |-
+                cd project-ml-microservice-kubernetes
+                echo "I am in directory" 
+
         # Download and cache dependencies
         - restore_cache:
             keys:
-              - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+              - v1-dependencies-{{ checksum "requirements.txt" }}
               # fallback to using the latest cache if no exact match is found
               - v1-dependencies-
 
