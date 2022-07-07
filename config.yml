@@ -7,7 +7,7 @@ commands:
     description: cd to file directory
     steps:
       - run:
-          name: goto directory
+          name: goto_directory
           command: |
             cd ~/repo/project-ml-microservice-kubernetes
 jobs:
@@ -20,7 +20,7 @@ jobs:
 
         steps:
           - checkout
-          - goto directory
+          - goto_directory
 
         # Download and cache dependencies
         - restore_cache:
@@ -49,4 +49,8 @@ jobs:
             command: |-
                 . venv/bin/activate
                 make lint 
-                
+
+workflows:
+  default:
+    jobs:
+      - build
