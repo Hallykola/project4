@@ -3,13 +3,14 @@ version: 2
 
 commands:
 
-  install_awscli:
+  goto_directory:
     description: cd to file directory
     steps:
       - run:
           name: goto_directory
           command: |
             cd ~/repo/project-ml-microservice-kubernetes
+            echo "I am in irectory"
 jobs:
     build:
         docker:
